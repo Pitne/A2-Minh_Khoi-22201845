@@ -195,3 +195,45 @@ task 2
 
 1. ![alt text](./frontend/public/IMG/2-1.png)
 2. ![alt text](./frontend/public/IMG/2-2.png) 3.![alt text](./frontend/public/IMG/2-3.png) 4.![alt text](./frontend/public/IMG/2-4.png) 5.![alt text](./frontend/public/IMG/2-5.png) 6.![alt text](./frontend/public/IMG/2-6.png) 7.![alt text](./frontend/public/IMG/2-7.png) 8.![alt text](./frontend/public/IMG/2-8.png)
+
+task 3
+
+1.
+
+![alt text](./frontend/public/IMG/3-1.1.png)
+![alt text](./frontend/public/IMG/3-1.2.png)
+![alt text](./frontend/public/IMG/3-1.3.png)
+![alt text](./frontend/public/IMG/3-1.4.png)
+
+2.
+
+![alt text](./frontend/public/IMG/3-2.1.png)
+![alt text](./frontend/public/IMG/3-2.2.png)
+![alt text](./frontend/public/IMG/3-2.3.png)
+![alt text](./frontend/public/IMG/3-2.4.png)
+
+3.
+
+![alt text](./frontend/public/IMG/3-3.1.png)
+![alt text](./frontend/public/IMG/3-3.2.png)
+![alt text](./frontend/public/IMG/3-3.3.png)
+![alt text](./frontend/public/IMG/3-3.4.png)
+![alt text](./frontend/public/IMG/3-3.5.png)
+![alt text](./frontend/public/IMG/3-3.6.png)
+![alt text](./frontend/public/IMG/3-3.7.png)
+![alt text](./frontend/public/IMG/3-3.8.png)
+
+4.
+
+![alt text](./frontend/public/IMG/3-4.1.png)
+![alt text](./frontend/public/IMG/3-4.2.png)
+![alt text](./frontend/public/IMG/3-4.3.png)
+![alt text](./frontend/public/IMG/3-4.4.png)
+![alt text](./frontend/public/IMG/3-4.5.png)
+![alt text](./frontend/public/IMG/3-4.6.png)
+![alt text](./frontend/public/IMG/3-4.7.png)
+![alt text](./frontend/public/IMG/3-4.8.png)
+
+\*Front-end user
+![alt text](./frontend/public/IMG/3-5.1.png)
+![alt text](./frontend/public/IMG/3-5.2.png)

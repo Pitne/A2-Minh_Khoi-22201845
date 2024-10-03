@@ -2,8 +2,8 @@ import { useState } from "react";
 
 function NewPhone(props) {
   const { contact, phones, setPhones } = props;
-  const [number, setNumber] = useState("");
-  const [name, setName] = useState("");
+  const [phone_number, setNumber] = useState("");
+  const [phone_type, setName] = useState("");
 
   async function createPhone(e) {
     e.preventDefault();
@@ -16,8 +16,8 @@ function NewPhone(props) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          number,
-          name,
+          phone_number,
+          phone_type,
         }),
       }
     );
@@ -38,7 +38,7 @@ function NewPhone(props) {
       onClick={(e) => e.stopPropagation()}
       className="new-phone"
     >
-      <select value={name} onChange={(e) => setName(e.target.value)}>
+      <select value={phone_type} onChange={(e) => setName(e.target.value)}>
         <option value="">Select Category</option>
         <option value="home">Home</option>
         <option value="work">Work</option>
@@ -49,7 +49,7 @@ function NewPhone(props) {
         type="text"
         placeholder="Phone Number"
         onChange={(e) => setNumber(e.target.value)}
-        value={number}
+        value={phone_number}
       />
       <button className="button green" type="submit">
         Add {contact.name}
