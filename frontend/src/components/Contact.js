@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"; // import useEffect
 import PhoneList from "./PhoneList.js";
+import CompanyList from "./CompanyList.js";
 
 function Contact(props) {
   const { contact, contacts, setContacts } = props;
