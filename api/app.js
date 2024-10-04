@@ -34,3 +34,8 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+require("./routes/company.routes");
+require("./routes/contacts.routes");
+require("./routes/phones.routes");
+require("./routes/stats.routes");
