@@ -53,6 +53,8 @@ function Contact(props) {
       <div style={expandStyle}>
         <hr />
         <PhoneList phones={phones} setPhones={setPhones} contact={contact} />
+        <hr />
+        <CompanyList contactId={contact.id} />
       </div>
     </div>
   );

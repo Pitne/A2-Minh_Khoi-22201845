@@ -8,7 +8,7 @@ var corsOptions = {
 };
 
 const db = require("./models");
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ after: true }).then(() => {
   console.log("Drop and re-sync db.");
 });
 
@@ -27,6 +27,7 @@ app.get("/", (req, res) => {
 
 require("./routes/contacts.routes")(app);
 require("./routes/phones.routes")(app);
+require("./routes/companies.routes")(app);
 require("./routes/stats.routes")(app);
 
 // set port, listen for requests
@@ -34,8 +35,3 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-
-require("./routes/company.routes");
-require("./routes/contacts.routes");
-require("./routes/phones.routes");
-require("./routes/stats.routes");

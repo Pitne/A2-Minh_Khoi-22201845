@@ -1,4 +1,4 @@
-const db = requuired("../models");
+const db = require("../models");
 const Company = db.companies;
 
 // Create and Save a new Company for a specific Contact
@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     .catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the company",
+          err.message || "Some error occurred while creating the company.",
       });
     });
 };
@@ -28,18 +28,15 @@ exports.findAll = (req, res) => {
   const contactId = req.params.contactId;
 
   Company.findAll({
-    where: { contrac_id: contactId }, //Find companies related to the contactId
+    where: { contact_id: contactId }, // Find companies related to the contactId
   })
-    .then((data) => {
-      res.send(data); // Send back all companies related to the contact
-    })
     .then((data) => {
       res.send(data); // Send back all companies related to the contact
     })
     .catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving companies",
+          err.message || "Some error occurred while retrieving companies.",
       });
     });
 };
@@ -78,7 +75,7 @@ exports.update = (req, res) => {
   })
     .then((num) => {
       if (num == 1) {
-        res.send(data); // Send back all companies related to the contact
+        // res.send(data);  // Send back all companies related to the contact
         res.send({
           message: "Company was updated successfully.",
         });
