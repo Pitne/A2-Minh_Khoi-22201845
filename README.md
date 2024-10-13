@@ -1,166 +1,17 @@
-# README.md
+# Task 1:
 
-IMPORTANT: Once you've cloned this to your forked repository, ensure that you continuously update this document as you complete each task to demonstrate your ongoing progress.
+1. Rename the "Delete" button to "Delete Contact" in Contact.js
+   ![alt text](./frontend/public/IMG/1.1.png)
+   ![alt text](./frontend/public/IMG/1.2.png)
+   ![alt text](./frontend/public/IMG/1.3.png)
 
-Please include your shared repository link here:
-
-Example:
-Choiru's shared repository: https://github.com/choiruzain-latrobe/Assignment2.git
-
-Make sure for **your case it is in Private**
-
-## Access Database
-
-1 **Plsql Cheat Sheet:**
-You can refer to the PostgreSQL cheat sheet [here](https://www.postgresqltutorial.com/postgresql-cheat-sheet/).
-
-2 **Know the Container ID:**
-To find out the container ID, execute the following command:
-
-```bash
-docker ps
- 9958a3a534c9   testsystem-nginx           "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:80->80/tcp   testsystem-nginx-1
- 53121618baa4   testsystem-frontend        "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   3000/tcp             testsystem-frontend-1
- c89e46ac94b0   testsystem-api             "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   5000/tcp             testsystem-api-1
- 9f4aea7cf538   postgres:15.3-alpine3.18   "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   5432/tcp             testsystem-db-1
-```
-
-3. Running the application
-
-**docker compose command:**
-
-```bash
-docker compose up --build
-```
-
-4 **Access postgreSQL in the container:**
-Once you have the container ID, you can execute the container using the following command:
-You will see the example of running the PostgreSQL inside the container.
-
-```bash
-docker exec -it testsystem-db-1 psql -U postgres
-choiruzain@MacMarichoy TestSystem % docker exec -it testsystem-db-1 psql -U postgres
-psql (15.3)
-Type "help" for help.
-
-postgres=# \dt
-          List of relations
- Schema |   Name   | Type  |  Owner
---------+----------+-------+----------
- public | contacts | table | postgres
- public | phones   | table | postgres
-(2 rows)
-
- postgres=# select * from contacts;
- id |  name  |         createdAt         |         updatedAt
-----+--------+---------------------------+---------------------------
-  1 | Helmut | 2024-08-08 11:57:57.88+00 | 2024-08-08 11:57:57.88+00
- (1 row)
- postgres=# select * from phones;
- id | phone_type |   number    | contactId |         createdAt          |         updatedAt
-----+------------+-------------+-----------+----------------------------+----------------------------
-  1 | Work       | 081431      |         1 | 2024-08-08 11:59:04.386+00 | 2024-08-08 11:59:04.386+00
-
-
-postgres=# select * from contacts;
-```
-
-Replace `container_ID` with the actual ID of the container you want to execute.
-
-## Executing API
-
-### Contact API
-
-1. Add contacts API (POST)
-
-```bash
-http post http://localhost/api/contacts name="Choiru"
-
-choiruzain@MacMarichoy-7 TestSystem % http post http://localhost/api/contacts name="Choiru"
-HTTP/1.1 200 OK
-Access-Control-Allow-Origin: http://localhost:3000
-Connection: keep-alive
-Content-Length: 102
-Content-Type: application/json; charset=utf-8
-Date: Thu, 08 Aug 2024 21:01:53 GMT
-ETag: W/"66-FmPYAaIkyQoroDwP2JsAZjWTAxs"
-Server: nginx/1.25.1
-Vary: Origin
-X-Powered-By: Express
-
-{
-"createdAt": "2024-08-08T21:01:53.017Z",
-"id": 1,
-"name": "Choiru",
-"updatedAt": "2024-08-08T21:01:53.017Z"
-}
-
-```
-
-2 Get contacts API (GET)
-
-```bash
-http get http://localhost/api/contacts
-
-
-choiruzain@MacMarichoy-7 TestSystem % http get http://localhost/api/contacts
-HTTP/1.1 200 OK
-Access-Control-Allow-Origin: http://localhost:3000
-Connection: keep-alive
-Content-Length: 104
-Content-Type: application/json; charset=utf-8
-Date: Thu, 08 Aug 2024 21:04:58 GMT
-ETag: W/"68-V+4KuL2xahYt8YAkKG6rKdR7wHg"
-Server: nginx/1.25.1
-Vary: Origin
-X-Powered-By: Express
-
-[
-{
-"createdAt": "2024-08-08T21:01:53.017Z",
-"id": 1,
-"name": "Choiru",
-"updatedAt": "2024-08-08T21:01:53.017Z"
-}
-]
-
-
-```
-
-3. Show/create the API commmand to delete the contacts (DELETE)
-
-```bash
-
-
-
-
-
-```
-
-4. Show/create the API command to edit the contacts (PUT)
-
-```
-http get http://localhost/api/contacts/1/phones
-
-```
-
-### Phone API
-
-Task 1:
-
-1. Select file Contact.js then change "Delete" at the line 48 to "Delete Contact"
-
-![alt text](./frontend/public/IMG/1.1.png)
-![alt text](./frontend/public/IMG/1.2.png)
-![alt text](./frontend/public/IMG/1.3.png)
-
-2. Select file NewPhone.js then change "Add" at the line 61 to "Add {contact.name}"
-
-![alt text](./frontend/public/IMG/2.1.png)
-![alt text](./frontend/public/IMG/2.2.png)
-![alt text](./frontend/public/IMG/2-3-4.3.png)
+2. Rename the "Add" button to "Add {contact.name}" in NewPhone.js
+   ![alt text](./frontend/public/IMG/2.1.png)
+   ![alt text](./frontend/public/IMG/2.2.png)
+   ![alt text](./frontend/public/IMG/2-3-4.3.png)
 
 3. Select file NewPhone.js then replace
+
    <input
    type="text"
    placeholder="Name"
@@ -191,49 +42,168 @@ to display the drop-menu with 4 categories
 ![alt text](./frontend/public/IMG/4.2.png)
 ![alt text](./frontend/public/IMG/2-3-4.3.png)
 
-task 2
+## task 2:
 
-1. ![alt text](./frontend/public/IMG/2-1.png)
-2. ![alt text](./frontend/public/IMG/2-2.png) 3.![alt text](./frontend/public/IMG/2-3.png) 4.![alt text](./frontend/public/IMG/2-4.png) 5.![alt text](./frontend/public/IMG/2-5.png) 6.![alt text](./frontend/public/IMG/2-6.png) 7.![alt text](./frontend/public/IMG/2-7.png) 8.![alt text](./frontend/public/IMG/2-8.png)
+1. Show Contact
+   ![alt text](./frontend/public/IMG/2-1.png)
+2. Add Contact
+   ![alt text](./frontend/public/IMG/2-2.png)
+3. Delete Contact
+   ![alt text](./frontend/public/IMG/2-3.png)
+4. Update Contact
+   ![alt text](./frontend/public/IMG/2-4.png)
+5. Show Phone
+   ![alt text](./frontend/public/IMG/2-5.png)
+6. Add Phone
+   ![alt text](./frontend/public/IMG/2-6.png)
+7. Delete Phone
+   ![alt text](./frontend/public/IMG/2-7.png)
+8. Update Phone
+   ![alt text](./frontend/public/IMG/2-8.png)
 
-task 3
+### task 3:
 
-1.
+1. Modified the contacts table to include the "id", "Name" and "Address"
+
+- before
 
 ![alt text](./frontend/public/IMG/3-1.1.png)
-![alt text](./frontend/public/IMG/3-1.2.png)
-![alt text](./frontend/public/IMG/3-1.3.png)
-![alt text](./frontend/public/IMG/3-1.4.png)
 
-2.
+- after
+
+  ![alt text](./frontend/public/IMG/3-1.2.png)
+
+- ![alt text](./frontend/public/IMG/3-1.3.png)
+  ![alt text](./frontend/public/IMG/3-1.4.png)
+
+2. Modified the phones table to include "id", "phone_type", "phone_number", and "contact_id"
+
+- Before
 
 ![alt text](./frontend/public/IMG/3-2.1.png)
-![alt text](./frontend/public/IMG/3-2.2.png)
-![alt text](./frontend/public/IMG/3-2.3.png)
-![alt text](./frontend/public/IMG/3-2.4.png)
 
-3.
+- After
 
-![alt text](./frontend/public/IMG/3-3.1.png)
-![alt text](./frontend/public/IMG/3-3.2.png)
-![alt text](./frontend/public/IMG/3-3.3.png)
-![alt text](./frontend/public/IMG/3-3.4.png)
-![alt text](./frontend/public/IMG/3-3.5.png)
-![alt text](./frontend/public/IMG/3-3.6.png)
-![alt text](./frontend/public/IMG/3-3.7.png)
-![alt text](./frontend/public/IMG/3-3.8.png)
+  ![alt text](./frontend/public/IMG/3-2.2.png)
 
-4.
+  ![alt text](./frontend/public/IMG/3-2.3.png)
+  ![alt text](./frontend/public/IMG/3-2.4.png)
+
+3. Adjusted the front_end to reflect these database changes
+   ![alt text](./frontend/public/IMG/3-3.1.png)
+   ![alt text](./frontend/public/IMG/3-3.2.png)
+   ![alt text](./frontend/public/IMG/3-3.3.png)
+   ![alt text](./frontend/public/IMG/3-3.4.png)
+   ![alt text](./frontend/public/IMG/3-3.5.png)
+   ![alt text](./frontend/public/IMG/3-3.6.png)
+   ![alt text](./frontend/public/IMG/3-3.7.png)
+   ![alt text](./frontend/public/IMG/3-3.8.png)
+
+4. Tested all APIs associated with the modified tables:
+
+- GET contacts
 
 ![alt text](./frontend/public/IMG/3-4.1.png)
+
+- POST contacts
+
 ![alt text](./frontend/public/IMG/3-4.2.png)
+
+- DELETE contacts
+
 ![alt text](./frontend/public/IMG/3-4.3.png)
+
+- PUT contacts
+
 ![alt text](./frontend/public/IMG/3-4.4.png)
+
+- GET phones
+
 ![alt text](./frontend/public/IMG/3-4.5.png)
+
+- POST phones
+
 ![alt text](./frontend/public/IMG/3-4.6.png)
+
+- DELETE phones
+
 ![alt text](./frontend/public/IMG/3-4.7.png)
+
+- PUT phones
+
 ![alt text](./frontend/public/IMG/3-4.8.png)
 
 \*Front-end user
+
 ![alt text](./frontend/public/IMG/3-5.1.png)
 ![alt text](./frontend/public/IMG/3-5.2.png)
+
+### task 4:
+
+1-1. Create a new file named `company.model.js` in `./api/models` then define the `Company` model
+
+![alt text](./frontend/public/img/4-1.1.png)
+
+1-2. Import new `company.model.js` sequelize file to PostgreSQL database via `./api/models/index.js` **_line-25_**
+
+![alt text](./frontend/public/img/4-1.2.png)
+
+1-3. Check the database after configured `./api/models/index.js`
+
+![alt text](./frontend/public/img/t4.1db1.png)
+
+2-1. Create a new controller file for `company` named `company.controller.js` in `./api/controllers/` and import database from `./models` then define `const Company` to make sure the Combany model can access from databse object
+
+![alt text](./frontend/public/img/4-1.3.png)
+
+2-2. Create a new company for specific contact method in `company.controller.js`
+
+![alt text](./frontend/public/img/4-1.4.png)
+
+2-3. Create a save company in the database
+
+![alt text](./frontend/public/img/4-1.5.png)
+
+2-4. Create a get all companies associated with a specific contact method in `company.controller.js`
+
+![alt text](./frontend/public/img/4-1.6.png)
+
+2-5. Create get a single company based on both the `companyId` and `contactId` method in `company.controller.js`
+
+![alt text](./frontend/public/img/4-1.7.png)
+
+2-6. Create a updates a company's details based on the `companyId` and `contactId` method in `company.controller.js`
+
+![alt text](./frontend/public/img/4-1.8.png)
+
+2-7. Create a deletes a company from the database based on the `companyId` and `contactId` method in `company.controller.js`
+
+![alt text](./frontend/public/img/4-1.9.png)
+
+2-8. Create a file called `companies.routes.js` in ./api/routes to define the API endpoints for interacting with the company resources
+
+![alt text](./frontend/public/img/4-1.11.png)
+
+2-9.
+
+- Register the routes in main app file which is `app.js` in `./api/app.js`
+
+![alt text](./frontend/public/img/4-1.10.png)
+
+3. API testing
+
+- POST company
+
+![alt text](./frontend/public/img/4-3.1.png)
+
+- GET company
+
+![alt text](./frontend/public/img/4-3.2.png)
+
+- PUT company
+
+![alt text](./frontend/public/img/4-3.3.png)
+
+- DELETE company
+
+![alt text](./frontend/public/img/4-3.4.png)

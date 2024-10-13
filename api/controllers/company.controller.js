@@ -3,7 +3,6 @@ const Company = db.companies;
 
 // Create and Save a new Company for a specific Contact
 exports.create = (req, res) => {
-  // Create a Company object with the contactId from the URL
   const company = {
     company_name: req.body.company_name,
     company_address: req.body.company_address,
@@ -23,15 +22,15 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all Companies for a specific Contact
+// Get all Companies for a specific Contact
 exports.findAll = (req, res) => {
   const contactId = req.params.contactId;
 
   Company.findAll({
-    where: { contact_id: contactId }, // Find companies related to the contactId
+    where: { contact_id: contactId },
   })
     .then((data) => {
-      res.send(data); // Send back all companies related to the contact
+      res.send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -41,7 +40,7 @@ exports.findAll = (req, res) => {
     });
 };
 
-// Find a single Company by ID for a specific Contact
+// Get a single Company by ID for a specific Contact
 exports.findOne = (req, res) => {
   const companyId = req.params.companyId;
   const contactId = req.params.contactId;
