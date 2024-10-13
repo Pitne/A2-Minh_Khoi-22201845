@@ -142,68 +142,68 @@ to display the drop-menu with 4 categories
 
 1-1. Create a new file named `company.model.js` in `./api/models` then define the `Company` model
 
-![alt text](./frontend/public/img/4-1.1.png)
+![alt text](./frontend/public/IMG/4-1.1.png)
 
 1-2. Import new `company.model.js` sequelize file to PostgreSQL database via `./api/models/index.js` **_line-25_**
 
-![alt text](./frontend/public/img/4-1.2.png)
+![alt text](./frontend/public/IMG/4-1.2.png)
 
 1-3. Check the database after configured `./api/models/index.js`
 
-![alt text](./frontend/public/img/t4.1db1.png)
+![alt text](./frontend/public/IMG/t4.1db1.png)
 
 2-1. Create a new controller file for `company` named `company.controller.js` in `./api/controllers/` and import database from `./models` then define `const Company` to make sure the Combany model can access from databse object
 
-![alt text](./frontend/public/img/4-1.3.png)
+![alt text](./frontend/public/IMG/4-1.3.png)
 
 2-2. Create a new company for specific contact method in `company.controller.js`
 
-![alt text](./frontend/public/img/4-1.4.png)
+![alt text](./frontend/public/IMG/4-1.4.png)
 
 2-3. Create a save company in the database
 
-![alt text](./frontend/public/img/4-1.5.png)
+![alt text](./frontend/public/IMG/4-1.5.png)
 
 2-4. Create a get all companies associated with a specific contact method in `company.controller.js`
 
-![alt text](./frontend/public/img/4-1.6.png)
+![alt text](./frontend/public/IMG/4-1.6.png)
 
 2-5. Create get a single company based on both the `companyId` and `contactId` method in `company.controller.js`
 
-![alt text](./frontend/public/img/4-1.7.png)
+![alt text](./frontend/public/IMG/4-1.7.png)
 
 2-6. Create a updates a company's details based on the `companyId` and `contactId` method in `company.controller.js`
 
-![alt text](./frontend/public/img/4-1.8.png)
+![alt text](./frontend/public/IMG/4-1.8.png)
 
 2-7. Create a deletes a company from the database based on the `companyId` and `contactId` method in `company.controller.js`
 
-![alt text](./frontend/public/img/4-1.9.png)
+![alt text](./frontend/public/IMG/4-1.9.png)
 
 2-8. Create a file called `companies.routes.js` in ./api/routes to define the API endpoints for interacting with the company resources
 
-![alt text](./frontend/public/img/4-1.11.png)
+![alt text](./frontend/public/IMG/4-1.11.png)
 
 2-9.
 
 - Register the routes in main app file which is `app.js` in `./api/app.js`
 
-![alt text](./frontend/public/img/4-1.10.png)
+![alt text](./frontend/public/IMG/4-1.10.png)
 
 3. API testing
 
 - POST company
 
-![alt text](./frontend/public/img/4-3.1.png)
+![alt text](./frontend/public/IMG/4-3.1.png)
 
 - GET company
 
-![alt text](./frontend/public/img/4-3.2.png)
+![alt text](./frontend/public/IMG/4-3.2.png)
 
 - PUT company
 
-![alt text](./frontend/public/img/4-3.3.png)
+![alt text](./frontend/public/IMG/4-3.3.png)
 
 - DELETE company
 
-![alt text](./frontend/public/img/4-3.4.png)
+![alt text](./frontend/public/IMG/4-3.4.png)
