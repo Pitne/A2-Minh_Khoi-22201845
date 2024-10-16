@@ -160,7 +160,7 @@ to display the drop-menu with 4 categories
 
 1-3. Check the database after configured `./api/models/index.js`
 
-![alt text](./frontend/public/IMG/t4.1db1.png)
+![alt text](./frontend/public/IMG/4-1-2.png)
 
 2-1. Create a new controller file for `company` named `company.controller.js` in `./api/controllers/` and import database from `./models` then define `const Company` to make sure the Combany model can access from databse object
 
