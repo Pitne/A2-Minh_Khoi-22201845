@@ -71,10 +71,15 @@ to display the drop-menu with 4 categories
 
 - after
 
-  ![alt text](./frontend/public/IMG/3-1.2.png)
+![alt text](./frontend/public/IMG/3-1.2.png)
 
-- ![alt text](./frontend/public/IMG/3-1.3.png)
-  ![alt text](./frontend/public/IMG/3-1.4.png)
+- before
+
+![alt text](./frontend/public/IMG/3-1.3.png)
+
+-after
+
+![alt text](./frontend/public/IMG/3-1.4.png)
 
 2. Modified the phones table to include "id", "phone_type", "phone_number", and "contact_id"
 
@@ -86,7 +91,12 @@ to display the drop-menu with 4 categories
 
   ![alt text](./frontend/public/IMG/3-2.2.png)
 
+- before
+
   ![alt text](./frontend/public/IMG/3-2.3.png)
+
+- after
+
   ![alt text](./frontend/public/IMG/3-2.4.png)
 
 3. Adjusted the front_end to reflect these database changes
@@ -207,3 +217,36 @@ to display the drop-menu with 4 categories
 - DELETE company
 
 ![alt text](./frontend/public/IMG/4-3.4.png)
+
+##### task 5:
+
+1.1. To ensure including all function sort of adding, edditing, deleting and updating records we have to create 3 files `Companylist.js`, `Company.js`, `NewCompany.js`
+
+1.2. For adding a new company via front-end, create `NewCompany.js` in `./src/components`
+
+- This component contains a form to allow the user to add a new company and linked through back-end and connected to database.
+
+![alt text](./frontend/public/IMG/5-1.2.png)
+
+1.3. For displays a company and edit or delete buttons via front-end, create `Company.js` in `./src/components` to appear those function
+
+- This component is responsible for rendering a single company in the data also provides the functionality to edit and delete a company.
+
+![alt text](./frontend/public/IMG/5-1.3.png)
+![alt text](./frontend/public/IMG/5-1.3.2.png)
+
+1.4. For the main componenent that handles the list of companies for a specific contact, create `Companylist.js` in `./src/components`
+
+- This component acts as the parent components for `Company` and `Newcompany`. It fetches the list of companies from the back-end and renders each company in a table row.
+
+![alt text](./frontend/public/IMG/5-1.4.png)
+
+1.5. After creeated 3 component files the last but not list step is intergrating `CompanyList` into `Contact.js` to ensure that `companies` is related to each contacts are displayed below the contact's detail, alongside phone numbers.
+
+**_Line 58_**
+
+![alt text](./frontend/public/IMG/5-1.5.png)
+
+/\* Front-end user:
+
+![alt text](./frontend/public/IMG/5-1.6.png)
